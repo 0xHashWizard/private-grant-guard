@@ -1,5 +1,6 @@
 import { useContract, useContractWrite, useContractRead } from 'wagmi';
 import { useAccount } from 'wagmi';
+import { FHE } from '@fhevm/solidity/lib/FHE.sol';
 
 // Contract ABI - this would be generated from the compiled contract
 const CONTRACT_ABI = [
@@ -62,6 +63,15 @@ const CONTRACT_ABI = [
 
 // Contract address - this would be set after deployment
 const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000"; // Replace with actual deployed address
+
+// FHE Helper functions for encryption
+export const encryptData = async (value: number): Promise<{ encrypted: string; proof: string }> => {
+  // This would use FHEVM to encrypt the data
+  // In a real implementation, this would call the FHEVM encryption functions
+  const encrypted = await FHE.encrypt(value);
+  const proof = await FHE.generateProof(encrypted);
+  return { encrypted, proof };
+};
 
 export const usePrivateGrantGuard = () => {
   const { address } = useAccount();

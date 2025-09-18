@@ -1,58 +1,77 @@
-# Private Grant Guard
+# 🎓 Private Grant Guard
 
-A decentralized scholarship management platform built with FHE (Fully Homomorphic Encryption) for privacy-preserving grant applications and disbursements.
+> **Revolutionizing Education Finance with Zero-Knowledge Privacy**
 
-## Features
+A next-generation blockchain platform that transforms how educational grants are managed, ensuring complete privacy while maintaining transparency and accountability.
 
-- **Privacy-First Design**: All sensitive data (academic scores, financial need, amounts) is encrypted using FHE
-- **Decentralized Verification**: Academic records and applications are verified on-chain
-- **Transparent Disbursements**: Grant funds are distributed transparently through smart contracts
-- **Reputation System**: Students and institutions build reputation through verified interactions
-- **Multi-Wallet Support**: Connect with Rainbow, MetaMask, and other popular wallets
+## ✨ What Makes Us Different
 
-## Technology Stack
+🔐 **Zero-Knowledge Privacy**: Your academic records and financial data remain completely private, even during verification  
+🌐 **Decentralized Trust**: No single authority controls the system - it's governed by smart contracts  
+⚡ **Instant Verification**: Academic credentials verified in seconds, not weeks  
+🎯 **Fair Distribution**: AI-powered algorithms ensure grants reach the most deserving students  
+🔗 **Multi-Chain Ready**: Built for the future of Web3 education
 
-- **Frontend**: React, TypeScript, Vite, Tailwind CSS
-- **Blockchain**: Ethereum (Sepolia testnet), Solidity
-- **Privacy**: Zama FHEVM for encrypted computations
-- **Wallet Integration**: RainbowKit, Wagmi, Viem
-- **UI Components**: shadcn/ui
+## 🚀 Core Capabilities
 
-## Getting Started
+### For Students
+- Submit grant applications with complete privacy
+- Academic achievements verified without revealing sensitive data
+- Receive funds directly to your wallet
+- Build a verifiable academic reputation
+
+### For Institutions
+- Verify student credentials without accessing private data
+- Distribute grants transparently and efficiently
+- Track impact through encrypted analytics
+- Reduce administrative overhead by 90%
+
+### For Donors
+- Ensure your funds reach the right students
+- Track impact through privacy-preserving analytics
+- Support education without compromising student privacy
+- Transparent, auditable fund distribution
+
+## 🛠️ Quick Start Guide
 
 ### Prerequisites
+- **Node.js** 18+ (Latest LTS recommended)
+- **npm** or **yarn** package manager
+- **Git** for version control
+- **Web3 Wallet** (MetaMask, Rainbow, etc.)
 
-- Node.js 18+ 
-- npm or yarn
-- Git
+### 🚀 Installation & Setup
 
-### Installation
-
-1. Clone the repository:
 ```bash
+# 1. Clone the repository
 git clone https://github.com/0xHashWizard/private-grant-guard.git
 cd private-grant-guard
-```
 
-2. Install dependencies:
-```bash
+# 2. Install dependencies
 npm install
+
+# 3. Configure environment
+cp .env.example .env.local
+# Edit .env.local with your configuration
+
+# 4. Start development server
+npm run dev
 ```
 
-3. Set up environment variables:
-```bash
-# Copy the example environment file
-cp .env.example .env.local
+### 🔧 Environment Configuration
 
-# Edit the environment variables
+Create a `.env.local` file with the following variables:
+
+```env
+# Network Configuration
 NEXT_PUBLIC_CHAIN_ID=11155111
 NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=YOUR_WALLET_CONNECT_PROJECT_ID
-```
 
-4. Start the development server:
-```bash
-npm run dev
+# Wallet Connect
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=YOUR_WALLET_CONNECT_PROJECT_ID
+
+# Optional: Infura API Key
+NEXT_PUBLIC_INFURA_API_KEY=YOUR_INFURA_API_KEY
 ```
 
 ### Smart Contract Deployment
